@@ -1,6 +1,7 @@
 [CmdletBinding()]
 Param()
 
+Import-Module ActiveDirectory
 Clear-Host
 Write-Host "Creating users"
 $NewUsers = Import-Csv -Path .\NewUsers.csv
