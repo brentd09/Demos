@@ -10,6 +10,6 @@ if ($DemoOuExists -eq $false) {New-ADOrganizationalUnit -Path 'DC=Adatum,DC=com'
 foreach ($NewUser in $NewUsers) {
   $NewUser |
    Select-Object -Property *,@{n='AccountPassword';e={$_.ClearPassword | ConvertTo-SecureString -AsPlainText -Force}} -ExcludeProperty ClearPassword |
-   New-ADUser
+   New-ADUser -PassThru | Enable-ADAccount
 }
 
