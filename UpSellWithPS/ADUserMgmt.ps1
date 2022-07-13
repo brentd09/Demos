@@ -13,7 +13,7 @@ Add-Type -AssemblyName System.Windows.Forms
 $Form                            = New-Object system.Windows.Forms.Form
 $Form.ClientSize                 = New-Object System.Drawing.Point(914,414)
 $Form.text                       = "Level 1 HelpDesk tool"
-$Form.TopMost                    = $false
+$Form.TopMost                    = $true
 
 $Label1                          = New-Object system.Windows.Forms.Label
 $Label1.text                     = "Choose an Active Directory User to manage"
